@@ -28,11 +28,11 @@ const Testimonials = () => {
                           <div className="text">
                             <div  className="h3"> { e.h3}</div>
                             <div className="starts">
-                              <i class='bx bxs-star'></i>
-                              <i class='bx bxs-star'></i>
-                              <i class='bx bxs-star'></i>
-                              <i class='bx bxs-star'></i>
-                              <i class='bx bxs-star'></i>
+                              <i className='bx bxs-star'></i>
+                              <i className='bx bxs-star'></i>
+                              <i className='bx bxs-star'></i>
+                              <i className='bx bxs-star'></i>
+                              <i className='bx bxs-star'></i>
                             </div>
                           </div>
                           <Image  src={Q} className='q2' alt={e.h3} />

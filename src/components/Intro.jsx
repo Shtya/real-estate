@@ -19,7 +19,7 @@ export default function Intro() {
 
             <div className="text">
             
-                <div class='h6' > <span>Crafting Exceptional</span> <span>Real Estate</span> <span>Experiences for 20+ Years in the UAE and Beyond Buy, Sell, Rent with The Best</span></div>
+                <div className='h6' > <span>Crafting Exceptional</span> <span>Real Estate</span> <span>Experiences for 20+ Years in the UAE and Beyond Buy, Sell, Rent with The Best</span></div>
                 <div className="btn">Contact us</div>
             </div>
             <ul className='social' >

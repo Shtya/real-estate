@@ -1,5 +1,5 @@
 'use client' ;
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Box = () => {
     const select1 = ['value1' , 'value2' , 'value3' , 'value4'] ;
@@ -21,9 +21,9 @@ const Box = () => {
 
         </div>
         <div className="box-select">
-        <BoxSelect select={select1} icon='bx bxl-postgresql'  />
-        <BoxSelect select={select1} icon='bx bxl-postgresql'  />
-        <BoxSelect select={select1} icon='bx bxl-postgresql'  />
+        <BoxSelect classn='1' select={select1} icon='bx bxl-postgresql'  />
+        <BoxSelect classn='2' select={select1} icon='bx bxl-postgresql'  />
+        <BoxSelect classn='3' select={select1} icon='bx bxl-postgresql'  />
 
         </div>
         </div>
@@ -32,15 +32,21 @@ const Box = () => {
   )
 }
 
-const BoxSelect = ({select , icon}) => {
+const BoxSelect = ({select , icon , classn}) => {
+
     const [language , setlanguage] = useState(select[0])
     const handleSelect = (e)=>{
         setlanguage(e) ;
     }
 
+    const handleShowSelect = (classn)=>{
+      let selectbtn = document.querySelector(`.filter .select-${classn}`)
+        if(selectbtn.classList.contains("show")) return selectbtn.classList.remove("show")
+        selectbtn.classList.add("show")
+    }
   return (
 
-    <div className="select"   >
+    <div className={`select select-${classn}`} onClick={_=>handleShowSelect(classn)}  >
         <div className='main' data-aos="zoom-in" > <div className="group-select"> <i className={icon}></i> {language}</div>   <i className='bx bxs-chevron-down '></i> </div>
         <div className="inner-select">
             
