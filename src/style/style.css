@@ -951,6 +951,7 @@ main .Services .slick-slide > div ul {
   border-top: 1px solid rgba(17, 17, 17, 0.2666666667);
   margin-top: 15px;
   gap: 5px;
+  padding: 5px;
 }
 main .Services .slick-slide > div ul li {
   padding: 10px 0;
