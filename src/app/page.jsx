@@ -7,6 +7,7 @@ import Img1 from "../assets/icon/11.png"
 import Img2 from "../assets/icon/12.png"
 import Img3 from "../assets/icon/13.png"
 import Img4 from "../assets/icon/14.png"
+import gold from '@/assets/bg/gold1.jpg'
 
 import b1 from '@/assets/services/1.jpg'
 import b2 from '@/assets/services/2.jpg'
@@ -86,7 +87,7 @@ export default function Home() {
 
 
       {/* Services */}
-      <div className="real-services">
+      <div className="real-services" style={{ backgroundImage: `url('${gold.src}')`}}>
         <div className="h2"> Serivces</div>
         <div className="container">
           {real_services.map((e,index)=>(
