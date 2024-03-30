@@ -74,8 +74,8 @@ const Deal_Build = () => {
     <div className='Deal_Build' >
         <div className="container">
             <div className="text">
-                <div className="h3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
-                <div className="p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam velit illum ipsam vel aliquid numquam!</div>
+                <div className="h3"> Monthly Exclusive Deals</div>
+                <div className="p">Discover the top property deals this month and land your perfect match!</div>
                 <div className="btn"> Explore More </div>
             </div>
             <Slider {...settings} data-aos='zoom-in' >
