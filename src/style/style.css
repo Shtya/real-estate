@@ -22,8 +22,8 @@
 }
 
 :root {
-  --main: #e4ca11 ;
-  --main2: #e4ca11 ;
+  --main: gold ;
+  --main2: gold ;
   --second:#d5ad60 ;
   --gradient: linear-gradient(to bottom, #ffff, #222) ;
   --bg: linear-gradient(to bottom, #222, #111) ;
@@ -112,7 +112,7 @@ nav .container .bx-menu {
 }
 nav .container .logo {
   width: 200px;
-  height: 150px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -257,8 +257,8 @@ footer .container {
 footer .container img {
   height: 150px;
   width: 150px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 1200px) {
   footer .container {
@@ -382,7 +382,7 @@ footer .container > ul ul i {
   cursor: pointer;
   transition: 0.3s !important;
   position: relative;
-  color: #fff;
+  color: #111;
 }
 footer .container > ul ul i:hover {
   transform: translateY(5px) !important;
@@ -490,12 +490,13 @@ main .intro-slide .container .text .h6 {
   letter-spacing: -2px;
 }
 main .intro-slide .container .text .h6 span {
-  color: var(--main);
+  color: #fff;
 }
 main .intro-slide .container .text .h6 span:nth-of-type(2) {
   color: transparent;
-  -webkit-text-stroke: 2px white;
+  -webkit-text-stroke: 2px gold;
   font-size: 55px;
+  text-transform: uppercase;
 }
 @media (max-width: 1000px) {
   main .intro-slide .container .text .h6 {
@@ -525,7 +526,7 @@ main .intro-slide .container .btn {
 main .intro-slide .container .social {
   position: absolute !important;
   left: 10px;
-  bottom: 40px;
+  bottom: 70px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -629,6 +630,11 @@ main .about .container .text .p:nth-of-type(2) {
   padding: 10px;
   margin-bottom: 10px;
   border-left: 5px solid;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.5;
+  text-wrap: unset;
 }
 main .about .container:nth-child(2) {
   margin-top: -50px;
@@ -667,15 +673,14 @@ main .point-selling .container li {
   padding: 15px;
   text-align: center;
   height: 100%;
-  background: #f4f4f4;
+  background: #111;
   box-shadow: 3px 3px 10px rgba(17, 17, 17, 0.2);
 }
 main .point-selling .container li img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   -o-object-fit: contain;
      object-fit: contain;
-  filter: drop-shadow(0 0 4px rgba(17, 17, 17, 0.2));
   margin-bottom: 10px;
 }
 main .point-selling .container li span {
@@ -684,8 +689,15 @@ main .point-selling .container li span {
   display: block;
   text-transform: capitalize;
   letter-spacing: 1px;
-  text-shadow: 0 0 2px white;
-  font-weight: 600;
+  text-shadow: 0 0 2px #222;
+  font-weight: 300;
+  color: white;
+}
+main .point-selling .container li span b {
+  display: block;
+  font-size: 22px;
+  font-family: sans-serif;
+  letter-spacing: 0;
 }
 @media (max-width: 850px) {
   main .point-selling .container {
@@ -711,12 +723,12 @@ main .point-selling .container li span {
 }
 main .alert {
   position: relative;
-  height: 300px;
+  height: 400px;
   display: flex;
   padding: 50px 0;
 }
 main .alert .bgCover {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
@@ -736,7 +748,7 @@ main .alert .container {
 }
 main .alert .container .h3 {
   color: white;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 500;
 }
 @media (max-width: 700px) {
@@ -759,6 +771,9 @@ main .alert .container .btn-group {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+main .alert .container .btn-group a {
+  color: #111;
 }
 @media (max-width: 700px) {
   main .alert .container .btn-group a {
@@ -877,10 +892,11 @@ main .Services {
   }
 }
 main .Services .container .h2 {
-  text-align: left;
   margin: 0 0 10px;
   font-size: 35px;
   font-weight: 500;
+  width: 100%;
+  text-align: center;
 }
 main .Services .container .header {
   display: flex;
@@ -895,6 +911,7 @@ main .Services .container .header {
 }
 main .Services .container .header .btn {
   margin: 0;
+  color: #111;
 }
 main .Services .container .header ul {
   display: flex;
@@ -911,7 +928,6 @@ main .Services .container .header ul li {
   cursor: pointer;
 }
 main .Services .container .header ul li.active, main .Services .container .header ul li:hover {
-  color: white;
   background-color: var(--main);
   scale: 0.9;
   border: 3px double #fff;
@@ -930,12 +946,12 @@ main .Services .slick-slide > div {
 }
 main .Services .slick-slide > div img {
   width: 100%;
-  height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 main .Services .slick-slide > div .price {
-  color: var(--main2);
+  color: gold !important;
   font-size: 20px;
   font-weight: 500;
   padding: 5px;
@@ -970,7 +986,7 @@ main .Services .slick-slide > div ul li a {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: white;
+  color: #111;
 }
 main .Services .slick-slide > div ul li a i {
   font-size: 20px;
@@ -1114,6 +1130,12 @@ main .contact-us > .p {
   margin-bottom: 80px;
   font-size: 25px;
 }
+@media (max-width: 800px) {
+  main .contact-us > .p {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+}
 main .contact-us .container {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
@@ -1208,6 +1230,9 @@ main .contact-us .container .inputs textarea {
     height: 80px;
   }
 }
+main .contact-us .container .inputs .btn {
+  color: black;
+}
 @media (max-width: 700px) {
   main .contact-us .container .inputs .btn {
     font-size: 17px;
@@ -1217,15 +1242,16 @@ main .contact-us .container .inputs textarea {
 }
 main .contact-us .container .image {
   width: 100%;
-  height: calc(100% + 50px);
+  height: 564px;
   margin-bottom: 50px;
-  border: 8px double #111;
+  outline: 8px double #111;
+  margin-bottom: 10px !important;
 }
 main .contact-us .container .image img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: fill;
+     object-fit: fill;
   background-color: #111;
   box-shadow: 0 0 10px rgba(17, 17, 17, 0.2) inset;
   border: 1px solid rgba(17, 17, 17, 0.2666666667);
@@ -2148,8 +2174,11 @@ main .contact-us .container .image img {
   transition: 0.3s ease;
   border-radius: 50%;
   border: 4px double #fff;
-  color: white;
+  color: #111;
   font-size: 30px;
+}
+.whats i.fa-whatsapp {
+  color: white !important;
 }
 @media (max-width: 700px) {
   .whats i {
@@ -2186,16 +2215,39 @@ main .contact-us .container .image img {
 }
 
 .filter {
-  padding: 50px 0;
-  background: #f5f5f5;
-  box-shadow: 2px 2px 10px rgba(17, 17, 17, 0.0666666667) inset;
+  z-index: 100000;
+  position: relative;
+  margin: -50px 20px 0;
+  padding: 50px;
+  background: #fff;
+  box-shadow: 3px 3px 10px rgba(17, 17, 17, 0.4);
+  max-width: 1600px;
+}
+@media (min-width: 1600px) {
+  .filter {
+    margin: -50px auto 0;
+  }
+}
+.filter h1 {
+  font-size: 40px;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: sans-serif;
+}
+.filter p {
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  text-wrap: balance;
+  margin-bottom: 40px;
 }
 .filter .box-search {
   background: #111;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1000px;
+  max-width: 1450px;
   margin: 0 auto 10px;
   box-shadow: 2px 2px 10px rgba(17, 17, 17, 0.1333333333);
 }
@@ -2225,7 +2277,9 @@ main .contact-us .container .image img {
 }
 .filter .box-search .radio {
   padding: 10px 20px;
-  border-right: 1px solid #fff;
+  width: 200px;
+  justify-content: center;
+  display: flex;
 }
 @media (max-width: 700px) {
   .filter .box-search .radio {
@@ -2238,33 +2292,34 @@ main .contact-us .container .image img {
 }
 .filter .box-search .radio input {
   color: white;
+  cursor: pointer;
 }
 .filter .box-search .radio label {
   margin: 0 15px 0 5px;
   font-size: 18px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: white !important;
+  cursor: pointer;
 }
 .filter .box-search > input {
   flex: 1;
   padding: 10px 20px;
   border: none;
   font-size: 20px;
-  margin-right: 5px;
   border-radius: unset !important;
   border: 1px solid #111;
+  outline: 1px solid #fff;
+  margin: 2px 5px 2px 5px;
 }
 .filter .box-search button[type=submit] {
   padding: 15px;
   border: none;
   height: 100%;
-  width: 90px;
-  font-size: 20px;
+  width: 150px;
+  font-size: 16px;
   background: #111;
   color: white;
   cursor: pointer;
-  border: 1px solid #fff;
-  outline: 1px solid #111;
   transition: 0.3s;
   text-transform: uppercase;
   font-weight: 400;
@@ -2277,7 +2332,7 @@ main .contact-us .container .image img {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  max-width: 1000px;
+  max-width: 1450px;
   margin: 0 auto;
 }
 @media (max-width: 600px) {
@@ -2367,8 +2422,8 @@ main .contact-us .container .image img {
   font-size: 18px;
   margin-top: 20px;
   border-radius: 0;
-  border: 4px double white;
-  color: white;
+  border: 4px double #fff;
+  color: #111;
   cursor: pointer;
   transition: 0.4s;
   position: relative;
@@ -2376,6 +2431,12 @@ main .contact-us .container .image img {
   width: -moz-fit-content;
   width: fit-content;
   color: white;
+}
+@media (max-width: 800px) {
+  .btn {
+    padding: 5px 20px;
+    font-size: 16px;
+  }
 }
 .btn:hover {
   scale: 0.98;
@@ -2431,9 +2492,9 @@ main .contact-us .container .image img {
   width: fit-content;
   font-size: 30px;
   text-transform: uppercase;
-  color: var(--main);
+  color: #111;
   text-shadow: unset;
-  -webkit-text-stroke: 1px gold;
+  -webkit-text-stroke: 1px #111;
   font-weight: 500;
   position: relative;
 }

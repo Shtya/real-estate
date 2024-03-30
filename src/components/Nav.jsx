@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
 import Image from 'next/image';
-import Logo from '@/assets/logo.png'
+import Logo from '@/assets/about-us/logo.png'
 
 
 const Nav = () => {
@@ -28,7 +28,7 @@ const Nav = () => {
 
             if (window.scrollY > 0) {
                 container.style.height = '70px';  
-                navbar.style.background = "#e4ca11"               
+                navbar.style.background = "#222"               
                 logo.style.top = '0';
                 logo.style.height = '80px';
                 logo.style.clipPath = 'unset';

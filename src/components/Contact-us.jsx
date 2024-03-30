@@ -1,9 +1,8 @@
 'use client'
 import React, { useState } from 'react'
 
-import Img from "@/assets/bg/h4.png"
+import Img from "@/assets/about-us/contact-us.jpg"
 import Image from 'next/image'
-import axios from 'axios'
 
 const ContactUs = () => {
   const [Status , setStatus] = useState(false)

@@ -5,7 +5,9 @@ const Box = () => {
     const select1 = ['value1' , 'value2' , 'value3' , 'value4'] ;
   return (
     <div className='filter'>
-        <div className="container">
+      <h1 data-aos='zoom-in' >Find your perfect property in Dubai.</h1>
+      <p data-aos='zoom-in' >Explore our exceptional range of residences. Apartments, villas, duplexes, and more are ready for you to uncover!</p>
+
         <div className="box-search" data-aos="zoom-in" >
             
                 <div className="radio" >
@@ -25,7 +27,6 @@ const Box = () => {
         <BoxSelect classn='2' select={select1} icon='bx bxl-postgresql'  />
         <BoxSelect classn='3' select={select1} icon='bx bxl-postgresql'  />
 
-        </div>
         </div>
         
     </div>

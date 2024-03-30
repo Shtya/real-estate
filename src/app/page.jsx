@@ -1,21 +1,21 @@
 import "../style/style.css"
 import Intro from '@/components/Intro'
-import Alert from '@/assets/bg/1.jpg'
+import Alert from '@/assets/about-us/curious-about.jpg'
 
 import Image from "next/image";
-import Img1 from "../assets/icon/11.png"
-import Img2 from "../assets/icon/12.png"
-import Img3 from "../assets/icon/13.png"
-import Img4 from "../assets/icon/14.png"
+import Img1 from "../assets/icon/111.png"
+import Img2 from "../assets/icon/112.png"
+import Img3 from "../assets/icon/113.png"
+import Img4 from "../assets/icon/114.png"
 
-import b1 from '@/assets/bg/1.jpg'
-import b2 from '@/assets/bg/2.jpg'
-import b3 from '@/assets/bg/3.jpg'
-import b4 from '@/assets/bg/4.jpg'
-import b5 from '@/assets/bg/5.jpg'
+import b1 from '@/assets/services/1.jpg'
+import b2 from '@/assets/services/2.jpg'
+import b3 from '@/assets/services/3.jpg'
+import b4 from '@/assets/services/4.jpg'
 
 
-import aboutus from "../assets/about-us/1.jpg"
+import aboutus1 from "../assets/about-us/about1.jpg"
+import aboutus2 from "../assets/about-us/about2.jpg"
 import Testimonials from "@/components/Testimonials";
 import ContactUs from "@/components/Contact-us"
 import Footer from "@/components/Footer";
@@ -30,10 +30,10 @@ export const metadata = {
 
 
 const real_services = [
-  {img:b1 , cat:"Lorem ipsum dolor ."} ,
-  {img:b2 , cat:"Lorem ipsum dolor ."} ,
-  {img:b3 , cat:"Lorem ipsum dolor ."} ,
-  {img:b4 , cat:"Lorem ipsum dolor ."} ,
+  {img:b1 , cat:"commercial"} ,
+  {img:b2 , cat:"consultancy"} ,
+  {img:b3 , cat:"valuation"} ,
+  {img:b4 , cat:"investment"} ,
 ]
 
 /*
@@ -56,7 +56,7 @@ export default function Home() {
 
       <section className="about">
         <div className="container">
-          <div className="img" data-aos="fade-right" > <Image src={aboutus} alt="about-us" /></div> 
+          <div className="img" data-aos="fade-right" > <Image src={aboutus1} alt="about-us" /></div> 
           <div className="text"data-aos="fade-left" >
             <span> About us</span>
             <div className="h3">With over 20 years of crafting exceptional property experiences,</div>
@@ -65,7 +65,7 @@ export default function Home() {
         </div>
 
         <div className="container">
-          <div className="img" data-aos="fade-right" > <Image src={aboutus} alt="about-us" /></div> 
+          <div className="img" data-aos="fade-right" > <Image src={aboutus2} alt="about-us" /></div> 
           <div className="text"data-aos="fade-left" >
             <div className="h3">We don't just create transactions, We build lifelong partnerships and success storie. </div>
             <div className="p">Our team, armed with deep market insights, pledges a bespoke experience, seamlessly aligned with your unique aspirations.</div>
@@ -77,10 +77,10 @@ export default function Home() {
 
       <section className="point-selling">
           <ul className="container">
-            <li data-aos="fade-up" data-aos-delay="200" > <Image src={Img1} alt="200+ Trusted Clients" />   <span> 20 Years of Excellence Decades of Trust </span> </li>
-            <li data-aos="fade-up" data-aos-delay="300" > <Image src={Img2} alt="15+ Years of Expertise" /> <span> Exclusive Listings Unique Property Access  </span> </li>
-            <li data-aos="fade-up" data-aos-delay="400" > <Image src={Img3} alt="700+ Successful Cases" />  <span> Market Insight Informed Investment Advice  </span> </li>
-            <li data-aos="fade-up" data-aos-delay="500" > <Image src={Img4} alt="Competitive Pricing" />    <span> Customized Financing Flexible Financial Solutions  </span> </li>
+            <li data-aos="fade-up" data-aos-delay="200" > <Image src={Img1} alt="200+ Trusted Clients" />   <span> <b>20 Years of Excellence</b> Decades of Trust </span> </li>
+            <li data-aos="fade-up" data-aos-delay="300" > <Image src={Img2} alt="15+ Years of Expertise" /> <span> <b>Exclusive Listings</b> Unique Property Access  </span> </li>
+            <li data-aos="fade-up" data-aos-delay="400" > <Image src={Img3} alt="700+ Successful Cases" />  <span> <b>Market Insight</b> Informed Investment Advice  </span> </li>
+            <li data-aos="fade-up" data-aos-delay="500" > <Image src={Img4} alt="Competitive Pricing" />    <span> <b>Customized Financing</b> Flexible Financial Solutions  </span> </li>
           </ul>
       </section>
 
