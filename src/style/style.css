@@ -22,8 +22,8 @@
 }
 
 :root {
-  --main: gold ;
-  --main2: gold ;
+  --main: #bb8918 ;
+  --main2: #bb8918 ;
   --second:#d5ad60 ;
   --gradient: linear-gradient(to bottom, #ffff, #222) ;
   --bg: linear-gradient(to bottom, #222, #111) ;
@@ -382,7 +382,7 @@ footer .container > ul ul i {
   cursor: pointer;
   transition: 0.3s !important;
   position: relative;
-  color: #111;
+  color: white;
 }
 footer .container > ul ul i:hover {
   transform: translateY(5px) !important;
@@ -494,7 +494,7 @@ main .intro-slide .container .text .h6 span {
 }
 main .intro-slide .container .text .h6 span:nth-of-type(2) {
   color: transparent;
-  -webkit-text-stroke: 2px gold;
+  -webkit-text-stroke: 3px #111;
   font-size: 55px;
   text-transform: uppercase;
 }
@@ -517,6 +517,7 @@ main .intro-slide .container .text .h6 span:nth-of-type(2) {
 }
 main .intro-slide .container .btn {
   font-size: 30px;
+  color: #111;
 }
 @media (max-width: 1000px) {
   main .intro-slide .container .btn {
@@ -544,13 +545,13 @@ main .intro-slide .container .social {
 }
 main .intro-slide .container .social i {
   font-size: 30px;
-  color: white;
   cursor: pointer;
   transition: 0.3s;
   border: 4px double;
   padding: 10px;
   border-radius: 50%;
   background: var(--main);
+  color: white;
 }
 main .intro-slide .container .social i:hover {
   scale: 0.9;
@@ -673,8 +674,8 @@ main .point-selling .container li {
   padding: 15px;
   text-align: center;
   height: 100%;
-  background: #111;
-  box-shadow: 3px 3px 10px rgba(17, 17, 17, 0.2);
+  background: #f4f4f4;
+  box-shadow: 3px 3px 10px rgba(17, 17, 17, 0.2666666667);
 }
 main .point-selling .container li img {
   width: 80px;
@@ -689,9 +690,8 @@ main .point-selling .container li span {
   display: block;
   text-transform: capitalize;
   letter-spacing: 1px;
-  text-shadow: 0 0 2px #222;
+  text-shadow: 0 0 2px #fff;
   font-weight: 300;
-  color: white;
 }
 main .point-selling .container li span b {
   display: block;
@@ -924,7 +924,7 @@ main .Services .container .header ul li {
   padding: 6px 20px;
   font-size: 20px;
   text-transform: uppercase;
-  color: black;
+  color: black !important;
   cursor: pointer;
 }
 main .Services .container .header ul li.active, main .Services .container .header ul li:hover {
@@ -986,14 +986,14 @@ main .Services .slick-slide > div ul li a {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #111;
+  color: white;
 }
 main .Services .slick-slide > div ul li a i {
   font-size: 20px;
   margin-top: 2px;
 }
 main .Services .slick-slide > div ul li a span {
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
 }
 main .Testimonials {
@@ -2174,11 +2174,8 @@ main .contact-us .container .image img {
   transition: 0.3s ease;
   border-radius: 50%;
   border: 4px double #fff;
-  color: #111;
+  color: white;
   font-size: 30px;
-}
-.whats i.fa-whatsapp {
-  color: white !important;
 }
 @media (max-width: 700px) {
   .whats i {
@@ -2222,6 +2219,22 @@ main .contact-us .container .image img {
   background: #fff;
   box-shadow: 3px 3px 10px rgba(17, 17, 17, 0.4);
   max-width: 1600px;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  position: relative;
+  border: 2px solid rgba(17, 17, 17, 0.2);
+}
+.filter::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: rgba(17, 17, 17, 0.2);
 }
 @media (min-width: 1600px) {
   .filter {
@@ -2240,10 +2253,33 @@ main .contact-us .container .image img {
   text-transform: capitalize;
   font-family: sans-serif;
   text-wrap: balance;
-  margin-bottom: 40px;
+}
+.filter ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 0 0 30px;
+}
+.filter ul li {
+  font-size: 20px;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.3333333333);
+  padding: 10px;
+  border: 1px solid rgba(17, 17, 17, 0.3333333333);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  transition: 0.4s;
+}
+.filter ul li.active, .filter ul li:hover {
+  background: var(--main);
+  scale: 0.95;
+  opacity: 0.8;
 }
 .filter .box-search {
-  background: #111;
+  background-color: var(--main);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -2307,7 +2343,6 @@ main .contact-us .container .image img {
   border: none;
   font-size: 20px;
   border-radius: unset !important;
-  border: 1px solid #111;
   outline: 1px solid #fff;
   margin: 2px 5px 2px 5px;
 }
@@ -2317,12 +2352,12 @@ main .contact-us .container .image img {
   height: 100%;
   width: 150px;
   font-size: 16px;
-  background: #111;
   color: white;
   cursor: pointer;
   transition: 0.3s;
   text-transform: uppercase;
   font-weight: 400;
+  background-color: var(--main);
 }
 .filter .box-search button[type=submit]:hover {
   scale: 0.95;
@@ -2366,7 +2401,7 @@ main .contact-us .container .image img {
   justify-content: space-between;
   gap: 10px;
   cursor: pointer;
-  background-color: #111;
+  background-color: var(--main);
   padding: 10px;
   height: 100%;
   font-size: 20px;
@@ -2423,7 +2458,7 @@ main .contact-us .container .image img {
   margin-top: 20px;
   border-radius: 0;
   border: 4px double #fff;
-  color: #111;
+  color: #fff !important;
   cursor: pointer;
   transition: 0.4s;
   position: relative;

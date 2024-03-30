@@ -1,13 +1,16 @@
 'use client' ;
 import React, { useEffect, useState } from 'react'
+import bgIntro from '@/assets/bgCover.jpg'
 
 const Box = () => {
     const select1 = ['value1' , 'value2' , 'value3' , 'value4'] ;
   return (
-    <div className='filter'>
-      <h1 data-aos='zoom-in' >Find your perfect property in Dubai.</h1>
-      <p data-aos='zoom-in' >Explore our exceptional range of residences. Apartments, villas, duplexes, and more are ready for you to uncover!</p>
-
+    <div className='filter' data-aos='zoom-in' style={{backgroundImage: `url('${bgIntro.src}')`}} >
+      <h1 data-aos='zoom-in' >Find your perfect property in Emirates.</h1>
+      <ul>
+        <li className='active btn'> residential & new development</li>
+        <li className='btn'>commercial & development Land</li>
+      </ul>
         <div className="box-search" data-aos="zoom-in" >
             
                 <div className="radio" >

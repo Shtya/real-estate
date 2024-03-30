@@ -3,10 +3,10 @@ import Intro from '@/components/Intro'
 import Alert from '@/assets/about-us/curious-about.jpg'
 
 import Image from "next/image";
-import Img1 from "../assets/icon/111.png"
-import Img2 from "../assets/icon/112.png"
-import Img3 from "../assets/icon/113.png"
-import Img4 from "../assets/icon/114.png"
+import Img1 from "../assets/icon/11.png"
+import Img2 from "../assets/icon/12.png"
+import Img3 from "../assets/icon/13.png"
+import Img4 from "../assets/icon/14.png"
 
 import b1 from '@/assets/services/1.jpg'
 import b2 from '@/assets/services/2.jpg'
