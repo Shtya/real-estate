@@ -2232,7 +2232,7 @@ main .contact-us .container .image img {
 .filter {
   z-index: 100000;
   position: relative;
-  margin: -50px 20px 0;
+  margin: 20px;
   padding: 50px;
   background: #fff;
   box-shadow: 3px 3px 10px rgba(17, 17, 17, 0.4);
