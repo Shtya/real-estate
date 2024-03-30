@@ -1409,7 +1409,7 @@ main .Deal_Build .container .slick-slide {
   padding: 0 0 30px;
 }
 main .Deal_Build .container .slick-slide > div {
-  background: rgba(255, 255, 255, 0.0666666667);
+  background: #fff;
   width: 95%;
   margin: auto;
   position: relative;
@@ -1431,7 +1431,7 @@ main .Deal_Build .container .slick-slide > div .price {
 }
 main .Deal_Build .container .slick-slide > div .h3, main .Deal_Build .container .slick-slide > div .p, main .Deal_Build .container .slick-slide > div .price {
   text-align: center;
-  color: #fff;
+  color: #111;
 }
 main .Deal_Build .container .slick-slide > div a {
   position: relative;
@@ -1441,7 +1441,6 @@ main .Deal_Build .container .slick-slide > div a {
   margin: 10px auto;
   font-size: 14px;
   padding: 5px 10px;
-  background-color: #111;
 }
 
 .about-us {

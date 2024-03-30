@@ -19,7 +19,7 @@ const testimoials = [
 const Testimonials = () => {
   return (
     <div className="Testimonials">
-        <div className="h2" data-aos="zoom-in" > testimonials </div>
+        <div className="h2" data-aos="zoom-in" > our client say </div>
         <div className="container">
         {testimoials.map((e,index)=>(
                     <div data-aos="zoom-in" className={`box box-${index}`} key={index}>
