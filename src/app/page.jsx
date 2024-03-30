@@ -8,6 +8,8 @@ import Img2 from "../assets/icon/12.png"
 import Img3 from "../assets/icon/13.png"
 import Img4 from "../assets/icon/14.png"
 import gold from '@/assets/bg/gold1.jpg'
+import person from '@/assets/person.jpg'
+
 
 import b1 from '@/assets/services/1.jpg'
 import b2 from '@/assets/services/2.jpg'
@@ -23,6 +25,7 @@ import Footer from "@/components/Footer";
 import Box from "@/components/helpers/Box";
 import Link from "next/link";
 import Services from "@/components/Services";
+import Deal_Build from "@/components/Deal_Build";
 
 export const metadata = {
   title: "Real Estate",
@@ -115,9 +118,22 @@ export default function Home() {
       </div>
 
 
+      <div className="partners">
+        <div className="container">
+          <div className="text">
+            <div className="h3"> Lorem, ipsum .</div>
+            <div className="p"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, dolorem numquam sequi optio, fugit magnam ut possimus dignissimos qui dolore, nulla molestiae alias dolores. Nesciunt. </div>
+          </div>
+          <div className="img"> <Image src={person} alt="" /> </div>
+        </div>
+      </div>
+
+
       <Testimonials />
 
       <ContactUs />
+
+      <Deal_Build />
 
       <Footer />
 

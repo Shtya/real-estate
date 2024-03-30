@@ -583,6 +583,7 @@ main .about .container .img {
   position: relative;
   border: 5px double #111;
   padding: 1px;
+  box-shadow: 3px 3px 20px rgba(17, 17, 17, 0.3333333333);
 }
 main .about .container .img img {
   width: 100%;
@@ -602,7 +603,7 @@ main .about .container .text {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 2px 2px 10px rgba(17, 17, 17, 0.1333333333);
+  box-shadow: 3px 3px 20px rgba(17, 17, 17, 0.3333333333);
 }
 @media (max-width: 900px) {
   main .about .container .text {
@@ -663,9 +664,9 @@ main .point-selling {
 main .point-selling .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
-  padding: 50px 0;
+  padding: 30px 0;
   align-items: flex-start;
 }
 main .point-selling .container li {
@@ -970,7 +971,7 @@ main .Services .slick-slide > div ul {
 main .Services .slick-slide > div ul li {
   padding: 10px 0;
   flex: 1 1;
-  background-color: var(--main);
+  background-color: #222;
   color: #111;
   transition: 0.3s;
   display: flex;
@@ -993,6 +994,67 @@ main .Services .slick-slide > div ul li a i {
 main .Services .slick-slide > div ul li a span {
   font-size: 16px;
   text-transform: uppercase;
+}
+main .partners .container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  height: 85vh;
+}
+@media (max-width: 900px) {
+  main .partners .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 650px) {
+  main .partners .container {
+    padding: 30px 0;
+    grid-template-columns: 1fr;
+    min-height: 85vh;
+    height: unset;
+  }
+  main .partners .container .text {
+    order: 2;
+    padding: 20px 0 0;
+  }
+  main .partners .container .text .h3, main .partners .container .text .p {
+    text-align: center;
+  }
+  main .partners .container .text .h3 {
+    font-size: 25px !important;
+  }
+  main .partners .container .text .p {
+    font-size: 18px !important;
+  }
+}
+main .partners .container .text {
+  padding-left: 5px;
+}
+main .partners .container .text .h3 {
+  font-weight: 400;
+  text-shadow: 0 0 1px #222;
+  letter-spacing: 1px;
+  color: #111;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: "boxicons";
+}
+main .partners .container .text .p {
+  font-weight: 200;
+  text-shadow: 0 0 1px #222;
+  color: #111;
+  text-wrap: balance;
+  font-size: 22px;
+}
+main .partners .container .img {
+  width: 100%;
+  height: 100%;
+}
+main .partners .container .img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .Testimonials {
   background: #f4f4f4;
@@ -1026,7 +1088,7 @@ main .Testimonials .container {
   }
 }
 main .Testimonials .box {
-  background: #111;
+  background: #181818;
   padding: 10px;
   text-align: center;
   display: flex;
@@ -1034,9 +1096,7 @@ main .Testimonials .box {
   justify-content: center;
   align-items: center;
   position: relative;
-  outline: 5px double var(--main);
-  box-shadow: 2px 2px 10px rgba(17, 17, 17, 0.2);
-  flex: 1;
+  box-shadow: 2px 2px 10px rgba(85, 85, 85, 0.3333333333);
 }
 main .Testimonials .box.box-0 {
   width: 110%;
@@ -1273,6 +1333,115 @@ main .contact-us .container .image img {
   background-color: #111;
   box-shadow: 0 0 10px rgba(17, 17, 17, 0.2) inset;
   border: 1px solid rgba(17, 17, 17, 0.2666666667);
+}
+main .Deal_Build {
+  background-color: var(--main);
+}
+@media (max-width: 700px) {
+  main .Deal_Build {
+    padding: 40px 0;
+  }
+}
+main .Deal_Build .container {
+  position: relative;
+}
+main .Deal_Build .container .text {
+  position: absolute;
+  left: 0;
+  width: 25%;
+  background-color: #111;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+@media (max-width: 700px) {
+  main .Deal_Build .container .text {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+  }
+  main .Deal_Build .container .text .btn {
+    background-color: black;
+  }
+}
+main .Deal_Build .container .text .h3 {
+  color: white;
+  text-align: center;
+}
+main .Deal_Build .container .text .p {
+  color: white;
+  text-align: center;
+}
+main .Deal_Build .container .text .btn {
+  border: unset;
+}
+main .Deal_Build .container .slick-dots {
+  position: absolute;
+  bottom: -43px;
+  width: 100%;
+}
+main .Deal_Build .container .slick-dots li {
+  width: 10px;
+  height: 10px;
+}
+main .Deal_Build .container .slick-dots li button::before {
+  font-size: 10px !important;
+}
+main .Deal_Build .container .slick-list {
+  overflow: unset !important;
+}
+main .Deal_Build .container .slick-slider {
+  width: 75%;
+  margin-left: auto !important;
+  margin-right: 0 !important;
+  padding: 0 !important;
+}
+@media (max-width: 700px) {
+  main .Deal_Build .container .slick-slider {
+    width: 100%;
+  }
+}
+main .Deal_Build .container .slick-slide {
+  padding: 0 0 30px;
+}
+main .Deal_Build .container .slick-slide > div {
+  background: rgba(255, 255, 255, 0.0666666667);
+  width: 95%;
+  margin: auto;
+  position: relative;
+  border: 1px solid var(--main);
+  box-shadow: 3px 3px 10px rgba(17, 17, 17, 0.2666666667);
+  margin-top: 30px;
+}
+main .Deal_Build .container .slick-slide > div img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+main .Deal_Build .container .slick-slide > div .price {
+  color: gold !important;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 5px;
+}
+main .Deal_Build .container .slick-slide > div .h3, main .Deal_Build .container .slick-slide > div .p, main .Deal_Build .container .slick-slide > div .price {
+  text-align: center;
+  color: #fff;
+}
+main .Deal_Build .container .slick-slide > div a {
+  position: relative;
+  border: none;
+  height: 100%;
+  display: block;
+  margin: 10px auto;
+  font-size: 14px;
+  padding: 5px 10px;
+  background-color: #111;
 }
 
 .about-us {
@@ -2510,7 +2679,7 @@ main .contact-us .container .image img {
   font-size: 18px;
   margin-top: 20px;
   border-radius: 0;
-  border: 4px double #fff;
+  border: 3px double #fff;
   color: #fff !important;
   cursor: pointer;
   transition: 0.4s;
