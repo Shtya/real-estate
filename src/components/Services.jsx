@@ -26,10 +26,18 @@ const Services = () => {
                 {img: h2 , tag:"office space2" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
                 {img: h3 , tag:"office space3" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
                 {img: h4 , tag:"office space4" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
+                {img: h1 , tag:"office space1" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
+                {img: h2 , tag:"office space2" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
+                {img: h3 , tag:"office space3" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
+                {img: h4 , tag:"office space4" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
             ],
         },
         {
             type:'rent' , data : [
+                {img: h4 , tag:"office space1" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
+                {img: h1 , tag:"office space2" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
+                {img: h2 , tag:"office space3" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
+                {img: h4 , tag:"office space4" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
                 {img: h4 , tag:"office space1" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
                 {img: h1 , tag:"office space2" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
                 {img: h2 , tag:"office space3" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
@@ -42,6 +50,10 @@ const Services = () => {
                 {img: h2 , tag:"office space2" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
                 {img: h3 , tag:"office space3" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
                 {img: h4 , tag:"office space4" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
+                {img: h1 , tag:"office space1" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
+                {img: h2 , tag:"office space2" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
+                {img: h3 , tag:"office space3" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
+                {img: h4 , tag:"office space4" , price:"1,100,000" , h1:"Lorem ipsum dolor sit amet." , p:"consectetur adipisicing elit. Deserunt, a."} ,
             ],
         },
     ]
@@ -49,15 +61,15 @@ const Services = () => {
         dots: true,
         slidesToScroll: 1 ,
         infinite: true,
-        // centerPadding: "60px",
         slidesToShow: 1,
         arrows: false,
-        autoplay: true,
-        speed: 7000,
-        autoplaySpeed: 7000,
+        autoplay: false,
+        // speed: 7000,
+        // autoplaySpeed: 7000,
         lazyload: true,
         pauseOnHover: false ,
         adaptiveHeight: true,
+        rows: 2 ,
         responsive: [
             {
               breakpoint: 4000,
@@ -87,7 +99,7 @@ const Services = () => {
   return (
     <div className='Services'>
         <div className="container">
-            <div className="h2" data-aos='zoom-in' > Discover Property in Dubai </div>
+            <div className="h2" data-aos='zoom-in' > Discover Property in The UAE </div>
             <div className='header'>
                 <ul data-aos='zoom-in' > {services.map((e,index)=> ( <li  key={index} onClick={_=> setidx(index)} className={`btn ${idx == index ? 'active' : ""}`} > {e.type} </li> ))} </ul>
                 <a href='#' className='btn' data-aos='zoom-in' > More Property </a>

@@ -36,11 +36,11 @@ const ContactUs = () => {
   return (
     <section className='contact-us'>
 
-      <div  className="h3"> Speak to Our Experts </div>
+      <div  className="h2"> Speak to Our Experts </div>
+      <div className="p">Reach out for clear, personalized real estate guidance.</div>
             <form className='container' onSubmit={handleSubmit} >
                 <div data-aos='zoom-in'  className="image"> <Image src={Img} alt='contact-us' /> </div>
                 <div className="inputs" data-aos='zoom-in'>
-                  <div className="h3"> Reach out for clear, personalized real estate guidance. </div>
                   <div className="p">We are here to connect you with your ideal home or investment</div>
 
                   <input     type="text" placeholder='name' />

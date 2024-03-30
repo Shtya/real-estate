@@ -28,7 +28,7 @@ const Nav = () => {
 
             if (window.scrollY > 0) {
                 container.style.height = '70px';  
-                navbar.style.background = "#222"               
+                navbar.style.background = "#e4ca11"               
                 logo.style.top = '0';
                 logo.style.height = '80px';
                 logo.style.clipPath = 'unset';

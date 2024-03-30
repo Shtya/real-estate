@@ -34,11 +34,17 @@ const real_services = [
   {img:b2 , cat:"Lorem ipsum dolor ."} ,
   {img:b3 , cat:"Lorem ipsum dolor ."} ,
   {img:b4 , cat:"Lorem ipsum dolor ."} ,
-  {img:b5 , cat:"Lorem ipsum dolor ."} ,
-  {img:b1 , cat:"Lorem ipsum dolor ."} ,
 ]
 
+/*
 
+    2 images in about us    : 800w * 600h
+    4 images in services    : 400w * 400h
+    1 image in contact us   : 600w * 700h
+    1 logo                  : 150w * 100h
+    1 image in ('Curious About Your Property’s Market Value?') :  1600h * 400h
+
+ */
 
 export default function Home() {
   return (
@@ -53,8 +59,16 @@ export default function Home() {
           <div className="img" data-aos="fade-right" > <Image src={aboutus} alt="about-us" /></div> 
           <div className="text"data-aos="fade-left" >
             <span> About us</span>
-            <div className="h3">With over 20 years of crafting exceptional property experiences,Lime Brook simplifies your property transactions with comprehensive buying, selling, and leasing services optimized for maximum ROI. </div>
-            <div className="p">We don't just create transactions, We build lifelong partnerships and success storie. Our team, armed with deep market insights, pledges a bespoke experience, seamlessly aligned with your unique aspirations.</div>
+            <div className="h3">With over 20 years of crafting exceptional property experiences,</div>
+            <div className="p"> Lime Brook simplifies your property transactions with comprehensive buying, selling, and leasing services optimized for maximum ROI.</div>
+          </div>
+        </div>
+
+        <div className="container">
+          <div className="img" data-aos="fade-right" > <Image src={aboutus} alt="about-us" /></div> 
+          <div className="text"data-aos="fade-left" >
+            <div className="h3">We don't just create transactions, We build lifelong partnerships and success storie. </div>
+            <div className="p">Our team, armed with deep market insights, pledges a bespoke experience, seamlessly aligned with your unique aspirations.</div>
             <a href="/about-us" className="btn">about us</a>
           </div>
         </div>
@@ -95,7 +109,6 @@ export default function Home() {
           <div className="p">Get expert evaluations for all property types, with insights across local to global markets.</div>
           <div className="btn-group">
             <Link href="/contact-us" className="btn">conatct us</Link>
-            <Link href="/about-us" className="btn">about us</Link>
           </div>
         </div>
       </div>

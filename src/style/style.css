@@ -22,8 +22,8 @@
 }
 
 :root {
-  --main: rgba(14, 38, 43, 0.231372549) ;
-  --main2: #d5ad60 ;
+  --main: #e4ca11 ;
+  --main2: #e4ca11 ;
   --second:#d5ad60 ;
   --gradient: linear-gradient(to bottom, #ffff, #222) ;
   --bg: linear-gradient(to bottom, #222, #111) ;
@@ -489,6 +489,9 @@ main .intro-slide .container .text .h6 {
   font-weight: 600;
   letter-spacing: -2px;
 }
+main .intro-slide .container .text .h6 span {
+  color: var(--main);
+}
 main .intro-slide .container .text .h6 span:nth-of-type(2) {
   color: transparent;
   -webkit-text-stroke: 2px white;
@@ -546,11 +549,11 @@ main .intro-slide .container .social i {
   border: 4px double;
   padding: 10px;
   border-radius: 50%;
-  background: rgba(17, 17, 17, 0.3333333333);
+  background: var(--main);
 }
 main .intro-slide .container .social i:hover {
   scale: 0.9;
-  background-color: #111;
+  opacity: 0.7;
 }
 main .about {
   padding: 50px 0;
@@ -571,7 +574,7 @@ main .about .container {
     left: 0 !important;
   }
   main .about .container .img {
-    height: 100% !important;
+    height: 400px !important;
   }
 }
 main .about .container .img {
@@ -601,6 +604,11 @@ main .about .container .text {
   justify-content: center;
   box-shadow: 2px 2px 10px rgba(17, 17, 17, 0.1333333333);
 }
+@media (max-width: 900px) {
+  main .about .container .text {
+    min-height: 100%;
+  }
+}
 main .about .container .text span {
   font-size: 17px;
   letter-spacing: 6px;
@@ -608,15 +616,12 @@ main .about .container .text span {
   font-weight: 300;
 }
 main .about .container .text .h3 {
-  font-size: 16px;
+  font-size: 25px;
   font-weight: 600;
   letter-spacing: -1px;
   line-height: 1.5;
   margin: 10px 0;
   text-transform: capitalize;
-}
-main .about .container .text .h3::first-line {
-  font-size: 25px;
 }
 main .about .container .text .p:nth-of-type(2) {
   background: white;
@@ -624,6 +629,27 @@ main .about .container .text .p:nth-of-type(2) {
   padding: 10px;
   margin-bottom: 10px;
   border-left: 5px solid;
+}
+main .about .container:nth-child(2) {
+  margin-top: -50px;
+}
+@media (max-width: 900px) {
+  main .about .container:nth-child(2) {
+    margin-top: 20px;
+  }
+}
+main .about .container:nth-child(2) .img {
+  order: 3;
+}
+@media (max-width: 900px) {
+  main .about .container:nth-child(2) .img {
+    order: -1;
+  }
+}
+main .about .container:nth-child(2) .text {
+  width: calc(100% + 50px);
+  left: 0;
+  z-index: 10;
 }
 main .point-selling {
   background: white;
@@ -653,12 +679,13 @@ main .point-selling .container li img {
   margin-bottom: 10px;
 }
 main .point-selling .container li span {
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
   display: block;
   text-transform: capitalize;
   letter-spacing: 1px;
   text-shadow: 0 0 2px white;
+  font-weight: 600;
 }
 @media (max-width: 850px) {
   main .point-selling .container {
@@ -750,17 +777,25 @@ main .real-services {
 }
 main .real-services .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
 }
-@media (max-width: 1450px) {
+@media (max-width: 1500px) {
   main .real-services .container .box {
     height: 300px !important;
+  }
+}
+@media (max-width: 1200px) {
+  main .real-services .container .box {
+    height: 230px !important;
   }
 }
 @media (max-width: 1100px) {
   main .real-services .container {
     grid-template-columns: 1fr 1fr;
+  }
+  main .real-services .container .box {
+    height: 300px !important;
   }
 }
 @media (max-width: 750px) {
@@ -842,7 +877,6 @@ main .Services {
   }
 }
 main .Services .container .h2 {
-  color: #111;
   text-align: left;
   margin: 0 0 10px;
   font-size: 35px;
@@ -869,7 +903,7 @@ main .Services .container .header ul {
 }
 main .Services .container .header ul li {
   background-color: white;
-  border: 1px solid rgba(17, 17, 17, 0.3333333333);
+  border: 1px double rgba(17, 17, 17, 0.3333333333);
   padding: 6px 20px;
   font-size: 20px;
   text-transform: uppercase;
@@ -878,26 +912,27 @@ main .Services .container .header ul li {
 }
 main .Services .container .header ul li.active, main .Services .container .header ul li:hover {
   color: white;
-  background-color: black;
+  background-color: var(--main);
   scale: 0.9;
+  border: 3px double #fff;
 }
 main .Services .slick-list {
   overflow: unset !important;
 }
 main .Services .slick-slide > div {
-  background: white;
+  background: #111;
   width: 95%;
   margin: auto;
   position: relative;
-  border: 1px solid rgba(17, 17, 17, 0.2666666667);
+  border: 1px solid var(--main);
   box-shadow: 3px 3px 10px rgba(17, 17, 17, 0.2666666667);
+  margin-top: 30px;
 }
 main .Services .slick-slide > div img {
   width: 100%;
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
-  background: white;
 }
 main .Services .slick-slide > div .price {
   color: var(--main2);
@@ -907,6 +942,7 @@ main .Services .slick-slide > div .price {
 }
 main .Services .slick-slide > div .h3, main .Services .slick-slide > div .p, main .Services .slick-slide > div .price {
   text-align: center;
+  color: #fff;
 }
 main .Services .slick-slide > div ul {
   display: flex;
@@ -915,14 +951,15 @@ main .Services .slick-slide > div ul {
   border-top: 1px solid rgba(17, 17, 17, 0.2666666667);
   margin-top: 15px;
   gap: 5px;
-  padding: 0 10px;
 }
 main .Services .slick-slide > div ul li {
-  padding: 10px 5px;
+  padding: 10px 0;
   flex: 1 1;
-  background-color: white;
-  color: rgba(17, 17, 17, 0.6);
+  background-color: var(--main);
+  color: #111;
   transition: 0.3s;
+  display: flex;
+  justify-content: center;
 }
 main .Services .slick-slide > div ul li:hover {
   scale: 0.95;
@@ -932,6 +969,7 @@ main .Services .slick-slide > div ul li a {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: white;
 }
 main .Services .slick-slide > div ul li a i {
   font-size: 20px;
@@ -939,7 +977,7 @@ main .Services .slick-slide > div ul li a i {
 }
 main .Services .slick-slide > div ul li a span {
   font-size: 18px;
-  text-transform: capitalize;
+  text-transform: uppercase;
 }
 main .Testimonials {
   background: #f4f4f4;
@@ -981,7 +1019,7 @@ main .Testimonials .box {
   justify-content: center;
   align-items: center;
   position: relative;
-  border: 6px double white;
+  outline: 5px double var(--main);
   box-shadow: 2px 2px 10px rgba(17, 17, 17, 0.2);
   flex: 1;
 }
@@ -1057,20 +1095,23 @@ main .contact-us {
     padding: 30px 0;
   }
 }
-main .contact-us > .h3 {
-  margin-bottom: 100px;
+main .contact-us .h2 {
   text-align: center;
-  font-size: 30px;
   text-wrap: balance;
   font-weight: 500;
   text-transform: uppercase;
+  margin-bottom: 0;
 }
 @media (max-width: 800px) {
-  main .contact-us > .h3 {
+  main .contact-us .h2 {
     font-size: 20px;
     width: 90%;
-    margin: 0 auto 30px;
   }
+}
+main .contact-us > .p {
+  text-align: center;
+  margin-bottom: 80px;
+  font-size: 25px;
 }
 main .contact-us .container {
   display: grid;
@@ -1078,7 +1119,7 @@ main .contact-us .container {
   align-items: center;
   grid-gap: 10px;
   grid-gap: 10px;
-  gap: 10px;
+  gap: 20px;
   padding: 20px 60px;
   border: 1px solid rgba(17, 17, 17, 0.031372549);
   border-right: unset;
@@ -1114,26 +1155,17 @@ main .contact-us .container .inputs {
   position: relative;
   padding: 20px;
   background-color: #111;
-  border: 8px double #fff;
+  outline: 8px double #111;
 }
 @media (max-width: 700px) {
   main .contact-us .container .inputs {
     padding: 10px 5px;
   }
 }
-main .contact-us .container .inputs .h3 {
-  font-size: 25px;
-  color: white;
-}
-@media (max-width: 700px) {
-  main .contact-us .container .inputs .h3 {
-    font-size: 18px;
-    text-wrap: balance;
-  }
-}
 main .contact-us .container .inputs .p {
   font-size: 22px;
   color: white;
+  margin-bottom: 15px;
 }
 @media (max-width: 700px) {
   main .contact-us .container .inputs .p {
@@ -1143,10 +1175,6 @@ main .contact-us .container .inputs .p {
 }
 main .contact-us .container .inputs .h3, main .contact-us .container .inputs .p {
   text-align: center;
-}
-main .contact-us .container .inputs .btn {
-  background-color: white;
-  color: black;
 }
 main .contact-us .container .inputs input, main .contact-us .container .inputs textarea {
   padding: 10px;
@@ -1190,7 +1218,7 @@ main .contact-us .container .image {
   width: 100%;
   height: calc(100% + 50px);
   margin-bottom: 50px;
-  border: 10px double #111;
+  border: 8px double #111;
 }
 main .contact-us .container .image img {
   width: 100%;
@@ -2333,12 +2361,13 @@ main .contact-us .container .image img {
 }
 
 .btn {
-  background: #111;
+  background: var(--main);
   padding: 7px 20px;
   font-size: 18px;
   margin-top: 20px;
   border-radius: 0;
-  border: 4px double #111;
+  border: 4px double white;
+  color: white;
   cursor: pointer;
   transition: 0.4s;
   position: relative;
@@ -2401,8 +2430,9 @@ main .contact-us .container .image img {
   width: fit-content;
   font-size: 30px;
   text-transform: uppercase;
-  color: #111;
-  text-shadow: 0 0 3px #222;
+  color: var(--main);
+  text-shadow: unset;
+  -webkit-text-stroke: 1px gold;
   font-weight: 500;
   position: relative;
 }
@@ -2500,8 +2530,7 @@ main .contact-us .container .image img {
 }
 
 .slick-slider {
-  max-width: 1613px;
   overflow: hidden;
   margin: auto;
-  padding: 50px 0 100px;
+  padding: 0 0 100px;
 }/*# sourceMappingURL=style.css.map */
