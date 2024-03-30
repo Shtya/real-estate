@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 
 import Img from "@/assets/about-us/contact-us.jpg"
 import Image from 'next/image'
+import gold from '@/assets/bg/gold1.jpg'
+
 
 const ContactUs = () => {
   const [Status , setStatus] = useState(false)
@@ -33,7 +35,7 @@ const ContactUs = () => {
 
 
   return (
-    <section className='contact-us'>
+    <section className='contact-us' style={{ backgroundImage: `url('${gold.src}')`}}>
 
       <div  className="h2"> Speak to Our Experts </div>
       <div className="p">Reach out for clear, personalized real estate guidance.</div>

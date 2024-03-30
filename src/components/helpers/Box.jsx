@@ -6,7 +6,7 @@ const Box = () => {
     const select1 = ['value1' , 'value2' , 'value3' , 'value4'] ;
   return (
     <div className='filter' data-aos='zoom-in' style={{backgroundImage: `url('${bgIntro.src}')`}} >
-      <h1 data-aos='zoom-in' >Find your perfect property in Emirates.</h1>
+      <h1 data-aos='zoom-in' >Find your perfect property in UAE.</h1>
       <ul>
         <li className='active btn'> residential & new development</li>
         <li className='btn'>commercial & development Land</li>
